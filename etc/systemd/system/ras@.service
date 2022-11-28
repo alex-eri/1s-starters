@@ -1,0 +1,12 @@
+[Unit]
+Description=Remode admin service for 1c %i
+
+[Service]
+Type=forking
+StandardOutput=syslog
+StandardError=syslog
+WorkingDirectory=/opt/1cv8/%i/
+ExecStart=/opt/1cv8/x86_64/%i/ras --daemon cluster
+
+[Install]
+WantedBy=multi-user.target
