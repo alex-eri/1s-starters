@@ -1,0 +1,12 @@
+[Unit]
+Description=Debug service for 1c %i
+
+[Service]
+Type=forking
+StandardOutput=syslog
+StandardError=syslog
+WorkingDirectory=/opt/1cv8/x86_64/%i/
+ExecStart=/opt/1cv8/x86_64/%i/dbgs --port=1550
+
+[Install]
+WantedBy=multi-user.target
