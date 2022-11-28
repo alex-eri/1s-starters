@@ -1,0 +1,12 @@
+[Unit]
+Description=Service for 1c %i
+
+[Service]
+Type=forking
+StandardOutput=syslog
+StandardError=syslog
+WorkingDirectory=/opt/1cv8/x86_64/%i/
+ExecStart=/opt/1cv8/x86_64/%i/ragent -daemon -debug -http
+
+[Install]
+WantedBy=multi-user.target
