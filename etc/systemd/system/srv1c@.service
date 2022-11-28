@@ -5,6 +5,8 @@ Description=Service for 1c %i
 Type=forking
 StandardOutput=syslog
 StandardError=syslog
+User=usr1cv8
+Group=grp1cv8
 WorkingDirectory=/opt/1cv8/x86_64/%i/
 ExecStart=/opt/1cv8/x86_64/%i/ragent -daemon -debug -http
 
